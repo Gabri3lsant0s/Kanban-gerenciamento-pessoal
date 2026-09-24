@@ -152,5 +152,4 @@ Este projeto está sendo desenvolvido para praticar:
 
 
 
-Desenvolvido por \*\*\[Seu nome]\*\* como projeto de aprendizado e portfólio.
-
+Desenvolvido por **Gabriel Sá** como projeto de aprendizado e portfólio.
