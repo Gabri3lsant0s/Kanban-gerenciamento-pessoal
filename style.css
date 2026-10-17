@@ -1,0 +1,172 @@
+body {
+    margin: 0;
+
+    min-width: 100vh;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-color: #f4f7fb;
+
+    color: #1f2937;
+}
+
+header { 
+    background-color: #1d4ed8;
+
+    color: white;
+
+    padding: 24px;
+
+    text-align: center;
+}
+
+header h1 {
+    margin: 0; 
+
+    font-size: 2rem;
+}
+
+header p {
+    margin: 8px 0 0;
+}
+
+main {
+    max-width: 1200px;
+
+    margin: 32px auto;
+
+    padding: 0 24px 48px;
+}
+
+main > h2 {
+    margin-bottom: 24px;
+}
+
+.kanban-colunas {
+    display: flex;
+
+    gap: 24px;
+
+    align-items: flex-start;
+}
+
+.kanban > section {
+    flex: 1; 
+
+    background-color: white;
+
+    border-radius: 12px;
+
+    padding: 20px;
+
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08)
+}
+
+.kanban-colunas h3 {
+    margin-top: 0;
+
+    color: #1d4ed8;
+}
+
+.kanban-colunas article{
+    background-color: #eff6ff;
+
+    border-left: 4px solid #2563eb;
+
+    border-radius: 8px;
+
+    padding: 16px;
+
+    margin-bottom: 16px;
+}
+
+.kanban-colunas h4 {
+    margin: 6px 0;
+}
+
+.nova-tarefa {
+    background-color: white;
+
+    border-radius: 12px;
+
+    padding: 12px;
+
+    margin-top: 32px; 
+
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08)
+}
+
+.nova-tarefa h2 {
+    margin-top: 0;
+}
+
+.nova-tarefa form {
+    display: grid;
+
+    gap: 12px;
+}
+
+.nova-tarefa label {
+    font-weight: bold;
+}
+.nova-tarefa input, .nova-tarefa textarea, .nova-tarefa select {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 12px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 8px;
+
+    font: inherit;
+} 
+
+.nova-tarefa textarea {
+    min-height: 100px;
+}
+
+.nova-tarefa button {
+    background-color: #2563eb;
+
+    color: white;
+
+    border: none; 
+
+    border-radius: 8px;
+
+    padding: 12px 16px;
+
+    font: inherit;
+
+    font-weight: bold;
+
+    cursor: pointer; 
+}
+
+.nova-tarefa button:hover {
+    background-color: #1d4ed8;
+}
+
+@media (max-width: 768px) {
+
+    main {
+        padding: 0 20px 32px;
+
+    }
+
+    .kanban-colunas {
+        flex-direction: column;
+    }
+
+    .kanban-colunas > section {
+        width: 100%;
+    }
+}
+
+.nova-tarefa input:focus, .nova-tarefa textarea:focus, .nova-tarefa select:focus {
+    outline: 2px solid #93c5fd;
+
+    border-color: #2563eb;
+}

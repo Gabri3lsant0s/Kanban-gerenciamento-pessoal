@@ -1,63 +1,45 @@
 <!DOCTYPE html>
-<!-- Informa ao navegador este documento usa HTML5. -->
 
 <html lang="pt-BR">
-    <!-- Todo o conteúdo da página fica dentro da tag HTML.
-     lang informa que o idioma principal é português brasileiro. -->
-
   <head> 
-    <!-- Configurações da página que não aparecem no conteúdo visível. -->
 
     <meta charset="UTF-8">
-    <!-- Permite usar corretamente acentos, ç e outros caracteres. -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Faz a página se adaptar melhor à largura de celulares. -->
 
     <title>Meu Kanban</title>
-    <!-- Texto exibido na aba do navegador. -->
-  </header>
+    
+    <link rel="stylesheet" href="style.css">
+  </head>
 
   <body>
-    <!-- Tudo dentro de body aparece para quem visita o site. -->
-
+  <header>
     <h1>Meu kanban</h1>
-    <!-- h1 é o título principal da página. -->
 
     <p>Organize seus projetos, atividades e tarefas. </p>
-    <!-- p representa um parágrafo. -->
   </header>
 
   <main>
-    <!-- Conteúdo principal da página. -->
 
     <h2>Quadro Pessoal</h2>
-    <!-- títulodo quadro de tarefas. -->
 
+    <div class="kanban-colunas">
     <section>
-      <!-- Uma section agrupa conteúdo relacionado, aqui ela representa a coluna "A fazer". -->
      
       <h3>Não Iniciados</h3>
-      <!-- Título da primeira coluna. -->
 
       <article>
-        <!-- Cada article será um cartão de tarefa. -->
 
         <h4> Estudar HTML</h4>
-        <!--Título da tarefa. -->
 
         <p>Praticar tags básicas e estrutura de páginas.</p>
-        <!-- Descrição da tarefa.-->
 
         <p>Prioridade: Alta</p>
-        <!-- Prioridade da tarefa. -->
        </article>
      </section>
      <section> 
-      <!-- Segunda coluna do Kanban. -->
        <h3> Em Andamento</h3>
        <article> 
-        <!-- Uma tarefa que já começou. -->
 
         <h4>Criar o kanban</h4>
 
@@ -69,12 +51,10 @@
       </section>
 
       <section>
-        <!--Tarefa coluna do Kanban. -->
 
         <h3>Concluído</h3>
 
         <article>
-          <!-- Uma tarefa finalizada. -->
 
           <h4>Definir o projeto</h4>
 
@@ -83,17 +63,14 @@
           <p>Prioridade: Alta</p>
         </article>
       </section>
-      <section>
-        <!-- Esta seção será usada para cadastrar uma nova tarefa. -->
+      </div>
+      <section class="nova-tarefa">
 
         <h2>Nova tarefa</h2>
 
         <form>
-          <!-- form agrupa os campos que a pessoa preencherá. -->
 
           <label for="titulo-tarefa">Título da tarefa</label>
-          <!-- label mostra o nome do campo.
-               for conecta este texto ao input com id igual a titulo-tarefa. -->
 
                <input 
                type="text"
@@ -101,7 +78,6 @@
                name="titulo-tarefa"
                placeholder="Exemplo: Estudar JavaScript"
               >
-              <!-- input cria um campo de texto. placeholder é um exemplo que aparece dentro do campo. -->
 
               <label for="descricao-tarefa">Descrição</label>
 
@@ -110,31 +86,26 @@
                name="descricao-tarefa"
                placeholder="Descreva o que precisa ser feito."
               ></textarea>
-              <!-- texturea cria uma área maior para textos longos. -->
               >
 
               <label for="prioridade-tarefa">Prioridade</label>
 
               <select id="prioridade-tarefa" name="prioridade-tarefa">
-                <!-- select cria uma lista de opções. -->
 
                 <option value="baixa">Baixa</option>
                 <option value="media">Média</option>
                 <option value="alta">Alta</option>
               
               <label for="prazo-tarefa">Prazo</label>
-              <!-- Texto que identifica o campo de prazo. -->
                <input 
                type="date"
                id="prazo-tarefa"
                name="prazo-tarefa"
                >
-               <!-- type="date" cria um campo próprio para selecionar uma data. -->
               
               </select>
 
               <button type="submit">Adicionar tarefa</button>
-                <!-- button cria o botão que enviará o formulário no futuro. -->
             </form>
           </select>
         </form>
