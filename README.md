@@ -11,7 +11,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/status-em%20desenvolvimento-F59E0B?style=for-the-badge" alt="Status: em desenvolvimento">
   <img src="https://img.shields.io/badge/projeto-de%20aprendizado-2563EB?style=for-the-badge" alt="Projeto de aprendizado">
-  <img src="https://img.shields.io/badge/progresso-30%25-22C55E?style=for-the-badge" alt="Progresso: 30%">
+  <img src="https://img.shields.io/badge/progresso-30%25-22C55E?style=for-the-badge" alt="Progresso: 40%">
 </p>
 
 ---
@@ -75,7 +75,7 @@ flowchart LR
 
 | Fase | Foco | Etapas | Situação |
 |:---:|---|---|:---:|
-| 1 | Interface | Estrutura em HTML, colunas e cartões, formulário, estilo com CSS | 🟡 Em andamento |
+| 1 | Interface | Estrutura em HTML, colunas e cartões, formulário, estilo com CSS | ✅ Concluída |
 | 2 | Interatividade | Criar tarefas com JavaScript, salvar no navegador | ⚪ Planejada |
 | 3 | Backend | API com Python e Flask, conexão com PostgreSQL | ⚪ Planejada |
 | 4 | Produção | Cadastro e login de usuários, publicação online | ⚪ Planejada |
