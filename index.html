@@ -2,114 +2,81 @@
 
 <html lang="pt-BR">
   <head> 
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Meu Kanban</title>
-    
     <link rel="stylesheet" href="style.css">
   </head>
-
   <body>
   <header>
     <h1>Meu kanban</h1>
-
     <p>Organize seus projetos, atividades e tarefas. </p>
   </header>
-
   <main>
-
     <h2>Quadro Pessoal</h2>
-
     <div class="kanban-colunas">
-    <section>
-     
+    <section id="coluna-nao-iniciados">
       <h3>Não Iniciados</h3>
-
       <article>
-
         <h4> Estudar HTML</h4>
-
         <p>Praticar tags básicas e estrutura de páginas.</p>
-
         <p>Prioridade: Alta</p>
        </article>
      </section>
      <section> 
        <h3> Em Andamento</h3>
        <article> 
-
         <h4>Criar o kanban</h4>
-
         <p>Montar a estrutura da página em HTML.</p>
-
         <p>Prioridade: Alta</p>
        </article>
-     
       </section>
-
       <section>
-
         <h3>Concluído</h3>
-
         <article>
-
           <h4>Definir o projeto</h4>
-
           <p>Decidir que o projeto será um Kanban pessoal.</p>
-
           <p>Prioridade: Alta</p>
         </article>
       </section>
       </div>
       <section class="nova-tarefa">
-
         <h2>Nova tarefa</h2>
-
-        <form>
-
+        <form id="form-nova-tarefa">
           <label for="titulo-tarefa">Título da tarefa</label>
-
                <input 
                type="text"
                id="titulo-tarefa"
                name="titulo-tarefa"
                placeholder="Exemplo: Estudar JavaScript"
               >
-
               <label for="descricao-tarefa">Descrição</label>
-
               <textarea
                id="descricao-tarefa"
                name="descricao-tarefa"
                placeholder="Descreva o que precisa ser feito."
               ></textarea>
               >
-
               <label for="prioridade-tarefa">Prioridade</label>
-
               <select id="prioridade-tarefa" name="prioridade-tarefa">
-
                 <option value="baixa">Baixa</option>
                 <option value="media">Média</option>
                 <option value="alta">Alta</option>
-              
+                </select>
+
               <label for="prazo-tarefa">Prazo</label>
+              
                <input 
                type="date"
                id="prazo-tarefa"
                name="prazo-tarefa"
                >
-              
-              </select>
-
               <button type="submit">Adicionar tarefa</button>
             </form>
           </select>
         </form>
       </section>
    </main>
+   <script src="script.js" defer></script>
  </body>
 </html>
