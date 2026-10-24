@@ -11,7 +11,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/status-em%20desenvolvimento-F59E0B?style=for-the-badge" alt="Status: em desenvolvimento">
   <img src="https://img.shields.io/badge/projeto-de%20aprendizado-2563EB?style=for-the-badge" alt="Projeto de aprendizado">
-  <img src="https://img.shields.io/badge/progresso-30%25-22C55E?style=for-the-badge" alt="Progresso: 40%">
+  <img src="https://img.shields.io/badge/progresso-40%25-22C55E?style=for-the-badge" alt="Progresso: 40%">
 </p>
 
 ---
@@ -76,7 +76,7 @@ flowchart LR
 | Fase | Foco | Etapas | Situação |
 |:---:|---|---|:---:|
 | 1 | Interface | Estrutura em HTML, colunas e cartões, formulário, estilo com CSS | ✅ Concluída |
-| 2 | Interatividade | Criar tarefas com JavaScript, salvar no navegador | ⚪ Planejada |
+| 2 | Interatividade | Criar tarefas com JavaScript, salvar no navegador | 🟡 Em andamento |
 | 3 | Backend | API com Python e Flask, conexão com PostgreSQL | ⚪ Planejada |
 | 4 | Produção | Cadastro e login de usuários, publicação online | ⚪ Planejada |
 
@@ -84,15 +84,15 @@ flowchart LR
 
 ## 🛠️ Tecnologias
 
-### ✅ Usada atualmente
+### ✅ Usadas atualmente
 
 <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5">
+<img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3">
 
 ### 🔜 Planejadas para as próximas etapas
 
 | Tecnologia | Para que vai servir |
 |---|---|
-| ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white) | Visual do quadro e responsividade |
 | ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black) | Criar e mover tarefas, salvar no navegador |
 | ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white) | Linguagem do backend |
 | ![Flask](https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white) | API que conecta o site ao banco de dados |
@@ -125,13 +125,13 @@ flowchart LR
 2. Abra o arquivo `index.html` no navegador (dê dois cliques nele ou arraste para a janela do navegador).
 
 > [!NOTE]
-> A versão atual apresenta apenas a **estrutura visual inicial** do Kanban. Ainda não há estilo completo nem funcionamento: as tarefas são estáticas.
+> A versão atual já tem o **visual completo** do Kanban, mas as tarefas ainda são estáticas: a interatividade chega com o JavaScript.
 
 ---
 
 ## 📁 Estrutura do projeto
 
-Hoje o projeto tem só o `index.html`. Esta é a organização prevista conforme ele crescer:
+Esta é a organização do projeto, que cresce a cada etapa:
 
 ```text
 meu-kanban-pessoal/
@@ -139,7 +139,7 @@ meu-kanban-pessoal/
 ├── index.html
 ├── assets/
 │   └── banner-kanban.svg
-├── css/          # (planejado) estilos do quadro
+├── css/          # estilos do quadro
 ├── js/           # (planejado) lógica das tarefas
 └── backend/      # (planejado) API em Flask
 ```
