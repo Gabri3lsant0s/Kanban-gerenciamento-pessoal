@@ -170,3 +170,33 @@ main > h2 {
 
     border-color: #2563eb;
 }
+
+.botao-excluir {
+    background-color: #dc2626;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 12px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.botao-excluir:hover {
+    background-color: #b91c1c;
+}
+
+.botao-acao {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 12px;
+    margin-top: 10px;
+    margin-right: 8px;
+
+    cursor: pointer;
+}
+
+.botao-acao:hover {
+    background-color: #1d4ed8;
+}
