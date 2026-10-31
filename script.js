@@ -5,9 +5,14 @@ const campoTitulo = document.querySelector("#titulo-tarefa");
 const campoDescricao = document.querySelector("#descricao-tarefa");
 const campoPrioridade = document.querySelector("#prioridade-tarefa");
 const campoPrazo = document.querySelector("#prazo-tarefa");
+
+const botaoEnviar = document.querySelector("#form-nova-tarefa button[type='submit']");
+
 const colunaNaoIniciados = document.querySelector("#coluna-nao-iniciados");
 const colunaEmAndamento = document.querySelector("#coluna-em-andamento");
 const colunaConcluido = document.querySelector("#coluna-concluido");
+
+let cartaoEmEdicao = null;
 
 formulario.addEventListener("submit", function (evento) {
   evento.preventDefault();
@@ -17,15 +22,29 @@ formulario.addEventListener("submit", function (evento) {
   const prioridade = campoPrioridade.value;
   const prazo = campoPrazo.value;
 
-if (titulo.trim() === "" ||
+if (
+    titulo.trim() === "" ||
     descricao.trim() === "" ||
     prazo === ""
 ) {
-    alert("Preencha o título, descrição e prazo");
+    alert("Preencha o título, a descrição e o prazo.");
 
     return;
 }
+  if (cartaoEmEdicao !== null) {
+    cartaoEmEdicao.tituloCartao.textContent = titulo;
+    cartaoEmEdicao.descricaoCartao.textContent = descricao;
+    cartaoEmEdicao.prioridadeCartao.textContent = `Prioridade: ${prioridade}`;
+    cartaoEmEdicao.prazoCartao.textContent = `Prazo: ${prazo}`;
 
+    cartaoEmEdicao = null;
+
+    formulario.reset();
+
+    botaoEnviar.textContent = "Adicionar tarefa"; 
+
+    return;
+  }
   const novoCartao = document.createElement("article");
 
   const tituloCartao = document.createElement("h4");
@@ -39,15 +58,6 @@ if (titulo.trim() === "" ||
 
   const prazoCartao = document.createElement("p");
   prazoCartao.textContent = `Prazo: ${prazo}`;
-
-  const botaoExcluir = document.createElement("button");
-  botaoExcluir.type = "button";
-  botaoExcluir.textContent = "Excluir";
-  botaoExcluir.classList.add("botao-excluir");
-
-  botaoExcluir.addEventListener("click", function () {
-   novoCartao.remove();
-  });
  
   const botaoIniciar = document.createElement("button");
   botaoIniciar.type = "button";
@@ -67,6 +77,38 @@ if (titulo.trim() === "" ||
     colunaConcluido.append(novoCartao);
   });
 
+  const botaoEditar = document.createElement("button");
+  botaoEditar.type = "button";
+  botaoEditar.textContent = "Editar";
+  botaoEditar.classList.add("botao-acao");
+  
+  botaoEditar.addEventListener("click", function () {
+    campoTitulo.value = tituloCartao.textContent;
+    campoDescricao.value = descricaoCartao.textContent;
+
+    campoPrioridade.value = prioridadeCartao.textContent.replace("Prioridade: ", "");
+
+    campoPrazo.value = prazoCartao.textContent.replace("Prazo: ", "");
+
+    cartaoEmEdicao = {
+      tituloCartao,
+      descricaoCartao,
+      prioridadeCartao,
+      prazoCartao
+    };
+
+    botaoEnviar.textContent = "Salvar alterações";
+  });
+
+  const botaoExcluir = document.createElement("button");
+  botaoExcluir.type = "button";
+  botaoExcluir.textContent = "Excluir";
+  botaoExcluir.classList.add("botao-excluir");
+
+  botaoExcluir.addEventListener("click", function () {
+   novoCartao.remove();
+  });
+
   novoCartao.append(
     tituloCartao,
     descricaoCartao,
@@ -74,6 +116,7 @@ if (titulo.trim() === "" ||
     prazoCartao,
     botaoIniciar,
     botaoConcluir,
+    botaoEditar,
     botaoExcluir
   );
 
